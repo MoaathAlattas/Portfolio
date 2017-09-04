@@ -11,5 +11,8 @@
 //import('../../node_modules/bootstrap/js/tab.js')
 //import('../../node_modules/bootstrap/js/affix.js')
 
-setTimeout(() => { console.log("ES2015"); }, 1000);
 
+// with every scrollspy
+$('#menu').on('activate.bs.scrollspy', ()=> {
+    
+})

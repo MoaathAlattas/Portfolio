@@ -7,26 +7,81 @@
 @color7: #f2f2f2;
 @color8: #ffffff;
 
-.menu{
+// -------------------
+// Left Side
+// -------------------
+.left-side{
     background-color: @color4;
     height: 100vh;
     border-left: 10px solid @color2;
     color: #ffffff;
     text-align: center;
-
-    h1{
-        font-size: 42px;
-    }
-    
-    h2{
-        font-size: 22px;
-    }
 }
 
 
+// -------------------
+// Content
+// -------------------
 .content{
     position: fixed;
     top: 0;
     overflow: auto;
     height: 100vh;
+    background-color: @color7;
+    border: 20px @color8 solid;
+    border-width: 0 10px;
+
+    h3{
+        padding-top: 20px;
+        font-size:24px; 
+    }
+}
+
+
+// -------------------
+// Logo
+// -------------------
+.logo{
+    h1{
+        font-size: 52px;
+        margin: 30px 0 0;
+    }
+    
+    h2{
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+
+// -------------------
+// menu
+// -------------------
+.menu{
+    .navbar{
+        margin-top: 40px;
+        font-size: 18px;
+        border: 0;
+        li{
+            text-align: left;
+            background-color: @color5;
+            a{
+                color: @color2;
+                
+                &:hover{
+                    background-color: lighten(@color2, 8%);
+                    color: darken(@color6, 8%);
+                }
+            }
+            
+            &.active>a, &.active>a:hover{
+                color: @color6;
+                font-weight: bold;
+                background-color: @color2;
+            }
+    
+    
+        }
+    }
 }

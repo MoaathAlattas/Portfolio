@@ -2,18 +2,21 @@
 
 <div class="container-fluid"> 
   <div class="row">
-      <div class="col-md-4">
+
+      <div class="col-md-4 left-side">
+          @@include('./logo.html')
+          
           @@include('./menu.html')
       </div>
-      <div class="col-md-8 content">
 
+      <div class="col-md-8 content" data-spy="scroll" data-target="#menu">
           @@include('./about.html')
 
           @@include('./projects.html')
 
-          @@include('./contact.html')
-          
+          @@include('./contact.html')         
       </div>
+      
   </div>
 </div>
 
