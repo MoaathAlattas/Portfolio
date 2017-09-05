@@ -39,13 +39,10 @@ gulp.task('js', function(){
     ])
             .pipe(concat('script.js'))
             .pipe(gulpImports())
-            .pipe(babel())
-            .pipe(uglify())
+            //.pipe(babel())
+            //.pipe(uglify())
             .pipe(gulp.dest(path.build))
-            .pipe(reload({stream:true}));
-
- //path.node +'jquery/dist/jquery.min.js',
- //path.node +'bootstrap/dist/js/bootstrap.min.js',           
+            .pipe(reload({stream:true}));   
 })
 
 
