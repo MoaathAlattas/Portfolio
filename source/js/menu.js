@@ -27,6 +27,6 @@ $("nav ul li a[href^='#']").on('click', function(e) {
         offset = offset - 140
      }
 
-    $(`.content`).animate({ scrollTop: offset })
+    $(`.content`).animate({ scrollTop: offset },300)
 
     })

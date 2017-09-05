@@ -81,6 +81,10 @@
             color: darken(@color7, 15%);
             font-size:18px; 
         }
+
+        a{
+            font-size:16px; 
+        }
     }
 
     h5{
@@ -241,7 +245,34 @@
 // -------------------
 // Projects
 // -------------------
-.projects{}
+@media (min-width: @screen-sm-min) {
+    .projects{
+        img{
+            width:250px !important;
+        }
+    }
+
+}
+
+.projects{
+    img{
+        width:100px;
+    }
+
+    a{
+        text-decoration: none !important;
+    }
+
+    .panel{
+        margin-top: 5px;
+    }
+    ul{
+        li{
+            display: inline-block;
+        }
+    }
+
+}
 
 
 // -------------------

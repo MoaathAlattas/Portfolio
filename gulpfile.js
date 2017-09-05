@@ -39,8 +39,8 @@ gulp.task('js', function(){
     ])
             .pipe(concat('script.js'))
             .pipe(gulpImports())
-            //.pipe(babel())
-            //.pipe(uglify())
+            .pipe(babel())
+            .pipe(uglify())
             .pipe(gulp.dest(path.build))
             .pipe(reload({stream:true}));   
 })
