@@ -1,9 +1,0 @@
-{
-  "files.exclude": {
-    "node_modules/": "explorerExcludedFiles",
-    "yarn.lock": "explorerExcludedFiles",
-    ".vscode/": "explorerExcludedFiles",
-    "build/": "explorerExcludedFiles",
-    "package-lock.json": "explorerExcludedFiles"
-  }
-}
