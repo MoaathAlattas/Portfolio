@@ -11,7 +11,10 @@ $("#contactForm").on("submit", (e)=>{
     let message = $("#message").val()
 
     const data = `name=${name}&email=${email}&message=${message}`
+
     submitForm(data)
+
+    $('html, body').scrollTop(0)
 })
 
 //
@@ -50,5 +53,7 @@ function resetContactFrom(){
     $("#formSuccess").hide("slow")
     $("#formError").hide("slow")
     $("#resetContactFrom").hide("slow")
+
+    $('#contact').scrollTop(0)
 }
 

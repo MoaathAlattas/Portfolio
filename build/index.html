@@ -10,6 +10,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="author" content="Moaath Alattas"> 
     <link rel="stylesheet" href="./style.css"> 
+    <meta name="theme-color" content="#401452" />
     <!--[if lt IE 9]> 
           <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> 
           <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> 
@@ -30,20 +31,19 @@
         <h1>Moaath Alattas</h1>
         <h2>Web Developer &#38; Designer</h2>
 </div>
-
             <div class="row menu">
     <nav class="navbar navbar-default" id="menu">
             <ul class="nav nav-pills nav-stacked">
-                <li><a href="#about"><i class="fa fa-user" aria-hidden="true"></i> About</a></li>
+                <li class="active"><a href="#about"><i class="fa fa-user" aria-hidden="true"></i> About</a></li>
                 <li><a href="#projects"><i class="fa fa-picture-o" aria-hidden="true"></i> Projects</a></li>
-                <li><a href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact Me</a></li>
+                <li><a href="#contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact</a></li>
             </ul>
     </nav>
 </div>
         </div>
       </div>
 
-      <div class="col-md-8 col-lg-9 content" data-spy="scroll" data-target="#menu">
+      <div class="col-md-8 col-lg-9 content">
           <div class="row about" id="about">
         <h3>About Me</h3>
         <div class="col-md-12">
@@ -135,9 +135,7 @@
                         </div>
             </div>
     </div>  
-
 </div>
-
           <div class="row projects" id="projects">
         <h3>Latest Projects</h3>
 
@@ -172,12 +170,13 @@
 
             </div>
         </div>  
-</div>
 
+</div>
           <div class="row contact" id="contact">
         <h3>Contact Me</h3>
-        <div class="col-md-12">
 
+        <div class="col-md-12">
+            
             <form role="form" id="contactForm" data-toggle="validator">
                     <div class="row">
                         <div class="form-group col-sm-6">
@@ -207,7 +206,6 @@
                     </div>
 
                     <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right">Submit</button>
-                    <div class="clearfix"></div>
             </form>
 
 

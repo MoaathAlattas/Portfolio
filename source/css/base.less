@@ -7,6 +7,24 @@
 @color7: #f2f2f2;
 @color8: #ffffff;
 
+body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@media (min-width: @screen-sm-min) {
+body {
+    position:initial;
+    top:initial;
+    left: initial;
+    bottom: initial;
+    right: initial;
+    margin: initial;
+    }
+}
 
 a, .btn-link{
     text-decoration: none !important;
@@ -53,6 +71,7 @@ a, .btn-link{
 
 .content{
     overflow: hidden;
+    -webkit-overflow-scrolling: touch;
     margin-top: 140px;
     height: 100vh;
     background-color: @color7;
@@ -100,12 +119,27 @@ a, .btn-link{
     p{
         padding: 2px;
     }
+
+    >div{
+        overflow: auto;
+        min-height: 99vh;
+        max-height: 99vh;
+    }
+    >div::-webkit-scrollbar
+    {
+        width: 8px;
+        background-color: #F5F5F5;
+    }
+    >div::-webkit-scrollbar-thumb
+    {
+        border-radius: 20px;
+        background-color: darken(@color7, 20%);
+    }
+
 }
 
 @media (min-width: @screen-sm-min) {
     .content{
-        position: fixed;
-        top: 0;
         border: 20px @color8 solid;
         border-width: 0 10px;
         margin-top: auto;
@@ -209,34 +243,6 @@ a, .btn-link{
 }
 
 // -------------------
-// Pages
-// -------------------
-.about, 
-.contact, 
-.projects{
-    opacity: 0;
-    overflow: auto;
-    min-height: 99vh;
-    max-height: 99vh;
-}
-
-    .about::-webkit-scrollbar,
-    .projects::-webkit-scrollbar,
-    .contact::-webkit-scrollbar
-    {
-        width: 8px;
-        background-color: #F5F5F5;
-    }
-    .about::-webkit-scrollbar-thumb,
-    .projects::-webkit-scrollbar-thumb,
-    .contact::-webkit-scrollbar-thumb
-    {
-        border-radius: 20px;
-        background-color: darken(@color7, 20%);
-    }
-
-
-// -------------------
 // About
 // -------------------
 .about{
@@ -279,5 +285,21 @@ a, .btn-link{
 // -------------------
 // Contact
 // -------------------
-//.contact{}
+.contact{
+
+    .btn[type="submit"]{
+        width: 100%
+    }
+
+    #contactForm{
+        margin-bottom: 300px;
+    }
+
+    @media (min-width: @screen-sm-min) {
+        #contactForm{
+            margin-bottom: 0;
+        }
+    }
+
+}
 
