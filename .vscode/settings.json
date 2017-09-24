@@ -3,7 +3,8 @@
     ".vscode/": true,
     "build/": true,
     "node_modules/": true,
-    "yarn.lock": true
+    "yarn.lock": true,
+    "package-lock.json": "explorerExcludedFiles"
   },
   "git.ignoreLimitWarning": true
 }

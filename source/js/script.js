@@ -11,11 +11,14 @@
 //import('../../node_modules/bootstrap/js/tab.js')
 //import('../../node_modules/bootstrap/js/affix.js')
 
-
 // with every scrollspy
 $('#menu').on('activate.bs.scrollspy', function ()  {
     let current = $(this).find("li.active a").attr("href")
     $(current).animate({opacity: 1}, 500)
 }) 
 
-$(document).ready(()=>{})
+
+///
+$(document).ready(()=>{
+    resetContactFrom()
+})

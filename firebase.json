@@ -1,4 +1,5 @@
 {
+
   "hosting": {
     "public": "build",
     "ignore": [
@@ -12,5 +13,9 @@
         "destination": "/index.html"
       }
     ]
+  },
+
+  "functions": {
+    "source": "source/functions/"
   }
 }

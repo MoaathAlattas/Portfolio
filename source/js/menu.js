@@ -2,12 +2,13 @@ const aboutOffset = $('#about').offset().top
 const projectsOffset = $('#projects').offset().top
 const contactOffset = $('#contact').offset().top
 
+//
 $("nav ul li a[href^='#']").on('click', function(e) {
     let offset
     e.preventDefault()
 
-
-
+    resetContactFrom()
+    
 
     if(this.hash == '#about'){ 
         offset = aboutOffset
@@ -27,6 +28,7 @@ $("nav ul li a[href^='#']").on('click', function(e) {
         offset = offset - 140
      }
 
+    //
     $(`.content`).animate({ scrollTop: offset },300)
 
     })
