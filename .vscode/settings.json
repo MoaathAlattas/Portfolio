@@ -1,10 +1,8 @@
 {
   "files.exclude": {
-    ".vscode/": true,
-    "build/": true,
-    "node_modules/": true,
-    "yarn.lock": true,
+    "node_modules/": "explorerExcludedFiles",
+    "yarn.lock": "explorerExcludedFiles",
+    "build/": "explorerExcludedFiles",
     "package-lock.json": "explorerExcludedFiles"
-  },
-  "git.ignoreLimitWarning": true
+  }
 }
