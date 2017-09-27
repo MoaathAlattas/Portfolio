@@ -63,9 +63,12 @@ gulp.task('less', function() {
 / HTML
 *****************************************************************/
 gulp.task('html', function() {
-  return gulp.src([path.dev + '*.html',
+  return gulp.src([
+                   path.dev + '*.html',
+                   path.dev + '**/*.html',
                    '!'+path.dev+'header.html',
-                   '!'+path.dev+'footer.html',])
+                   '!'+path.dev+'footer.html',
+                 ])
             .pipe(fileinclude({ prefix: '@@', basepath: path.dev}))
             .pipe(gulp.dest(path.build))
             .pipe(reload({stream:true}));
@@ -93,17 +96,20 @@ gulp.task('browser-sync', ['html','less','js'], function() {
     });
     gulp.watch( path.dev + path.css + '*.less' , ['less']);
     gulp.watch( path.dev + path.js + "*.js", ['js']).on('change', reload);
-    gulp.watch( [path.dev+"*.html"], ['html']);
+    gulp.watch( [path.dev+"*.html", path.dev+"**/*.html"], ['html']);
 });
 
 /****************************************************************
 / Build project
 *****************************************************************/
 gulp.task('build', ['cleanBuild'], function () {
-return gulp.src([path.dev + path.img +'*' ])
+return gulp.src([path.dev + path.img +'*'])
           .pipe(gulp.dest(path.build+path.img)),
 
-      gulp.src([path.node +'font-awesome/fonts/*'])
+       gulp.src([path.dev +'projects/img/*.png'])
+          .pipe(gulp.dest(path.build+path.img+'projects/')),         
+          
+       gulp.src([path.node +'font-awesome/fonts/*'])
           .pipe(gulp.dest(path.build +'fonts/'));
 
 });

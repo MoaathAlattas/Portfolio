@@ -1,0 +1,59 @@
+// -------------------
+// Projects
+// -------------------
+@media (min-width: @screen-sm-min) {
+    .projects{
+
+    }
+}
+
+.projects{
+
+    .project{
+        .title{
+            position:absolute;
+            bottom: 0;
+            top:83%;
+            display:inline-block;
+            z-index: 1;
+            width: 300px;
+            
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: center;
+
+            background-color: #000000;
+            opacity: .7;    
+            transition: all 1s;           
+        }
+
+        img{
+            opacity: 1;
+            width: 300px;
+            transition: all 1s;  
+        }
+
+        &:hover{
+            .title{
+                top:0;
+            }
+            img{
+                opacity: 0.5;
+            }
+        }
+
+
+    }
+
+    .panel{
+        margin-top: 5px;
+    }
+
+    ul{
+        li{
+            display: inline-block;
+        }
+    }
+
+}

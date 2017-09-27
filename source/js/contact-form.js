@@ -1,4 +1,3 @@
-
 //
 $("#contactForm").on("submit", (e)=>{
     e.preventDefault()
@@ -30,13 +29,13 @@ function submitForm(data){
         url: "https://us-central1-my-portfolio-44e58.cloudfunctions.net/sendEmail",
         data: data,
 
-        success : (text)=>{
+        success : ()=>{
             $("#formSending").hide("slow")
             $("#formSuccess").show("slow")
             $("#resetContactFrom").show("slow")
         },
 
-        error : (text)=>{
+        error : ()=>{
             $("#formSending").hide("slow")
             $("#formError").show("slow")
             $("#resetContactFrom").show("slow")
@@ -56,4 +55,3 @@ function resetContactFrom(){
 
     $('#contact').scrollTop(0)
 }
-
