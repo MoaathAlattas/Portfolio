@@ -1,0 +1,45 @@
+// -------------------
+// Logo
+// -------------------
+.logo{
+    img{
+        margin: 7px 0 10px 10px;
+        width: 70px;
+        opacity: 0.8;
+        float: left;
+        border: 2px solid @color5;
+    }
+
+    h1{
+        font-size: 38px;
+        margin: 10px 0 0 0;
+        text-align: left;
+    }
+    
+    h2{
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        color: @color6;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+@media (min-width: @screen-sm-min) {
+    .logo{
+        img{
+            width: 150px;
+            float: initial;
+        }
+        h1{
+            font-size: 46px;
+            margin: 15px 0 0;
+            text-align: center;
+        }
+        
+        h2{
+            font-size: 22px;
+            text-align: center;
+        }
+    }
+}

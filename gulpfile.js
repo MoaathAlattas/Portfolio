@@ -64,8 +64,8 @@ gulp.task('less', function() {
 *****************************************************************/
 gulp.task('html', function() {
   return gulp.src([
-                   path.dev + '*.html',
                    path.dev + '**/*.html',
+                   path.dev + '*.html',
                    '!'+path.dev+'header.html',
                    '!'+path.dev+'footer.html',
                  ])
@@ -96,7 +96,7 @@ gulp.task('browser-sync', ['html','less','js'], function() {
     });
     gulp.watch( path.dev + path.css + '*.less' , ['less']);
     gulp.watch( path.dev + path.js + "*.js", ['js']).on('change', reload);
-    gulp.watch( [path.dev+"*.html", path.dev+"**/*.html"], ['html']);
+    gulp.watch( [path.dev+"**/*.html", path.dev+"*.html"], ['html']);
 });
 
 /****************************************************************

@@ -1,0 +1,34 @@
+// -------------------
+// Navbar
+// -------------------
+.navbar2{
+    background-color: @color4;
+    border: 10px solid @color2;
+    border-width: 0 2px;
+    color: @color8;
+    height: 150px;
+    width: 100%;
+    position: fixed !important;
+    top:0;
+    z-index: 1;
+    
+    
+    .vCenter{
+        position: initial;
+        top: auto;
+    }
+}
+@media (min-width: @screen-sm-min) {
+    .navbar2{
+        height: 100vh;
+        width: auto;
+        border-width: 0 0 0 10px;
+        text-align: center;
+        position: initial !important;
+        top: auto;
+        .vCenter{
+            position: relative;
+            top: 5%;
+        }
+    }
+}
