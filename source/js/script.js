@@ -13,4 +13,6 @@
 
 
 //
-$(document).ready(()=>{})
+$(document).ready(()=>{
+    $('[data-toggle="tooltip"]').tooltip()
+})

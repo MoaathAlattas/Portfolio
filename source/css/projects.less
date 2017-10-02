@@ -10,40 +10,118 @@
 .projects{
 
     .project{
-        width: auto;
-        .title{
+        position:relative;
+        width: 300px;
+        border-top: @color4 3px solid;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px #D8D8D8;
+
+        .info{
             position:absolute;
-            bottom: 0;
-            top:83%;
-            display:inline-block;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            top:78%;
             z-index: 1;
-            width: 300px;
-            
-            font-size: 32px;
-            font-weight: bold;
-            color: #ffffff;
-            text-align: center;
+            border-radius: 0 0 10px 10px;
 
             background-color: #000000;
             opacity: .7;    
-            transition: all 1s;           
+            transition: all 1s;  
+
+            h5{
+                font-size: 32px;
+                font-weight: bold;
+                color: @color8;
+                line-height: 20px;
+                margin: 10px 0 0;
+                padding: 0 5px;
+            }
+
+            &.open{
+                top:0;
+                border-radius: 8px 8px 10px 10px;
+            }
+        }
+
+
+        .details{
+            display: none;
+            margin-top: 20px;
+            color: @color8;
+            padding: 0;
+            font-size: 13px;
+            
+            li{
+                background-color: #272727;
+                margin-bottom: 2px;
+                list-style: none; 
+                padding: 5px;
+            }
+
+            .label{
+                color: @color1;
+                font-size: 11px;
+            }
+        }
+
+
+        .links{
+            position:absolute;
+            bottom: 4px;
+            left: 0;
+            padding: 0 5px;
+            right: 0;
+            z-index: 1;
+            font-size: 14px;
+            a{
+                color: @color6;
+                
+
+                &:hover{
+                    color: @color7;
+                }
+            }
+        }
+
+        .details-toggle{
+            position:absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            font-size: 22px;
+            padding: 0 5px;
+            margin: 0;
+            border:none;
+            height: auto;
+            background-color: transparent;
+            color: @color8;
+
+            transform:rotate(0deg);
+            transition: all 0.4s; 
+
+            &.open{
+                transform:rotate(360deg);
+            }
+            &:hover{
+                color: @color6;
+            }
+            &:active{
+                color: @color5;
+            }
         }
 
         img{
             opacity: 1;
             width: 300px;
-            transition: all 1s;  
-        }
+            border-radius: 10px;
+            transition: all 0.3s; 
 
-        &:hover{
-            .title{
-                top:0;
-            }
-            img{
-                opacity: 0.5;
+            &.open{
+                filter: blur(3px);
+
             }
         }
-
 
     }
 

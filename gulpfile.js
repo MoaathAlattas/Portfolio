@@ -95,7 +95,7 @@ gulp.task('browser-sync', ['html','less','js'], function() {
         }
     });
     gulp.watch( path.dev + path.css + '*.less' , ['less']);
-    gulp.watch( path.dev + path.js + "*.js", ['js']).on('change', reload);
+    gulp.watch( path.dev + path.js + "*.js", ['js']);
     gulp.watch( [path.dev+"**/*.html", path.dev+"*.html"], ['html']);
 });
 
