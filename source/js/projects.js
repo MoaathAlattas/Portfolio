@@ -18,6 +18,5 @@ $('.details-toggle').on('click', function(){
         $(`${target} > .info > .details`).fadeOut("fast")
     }
     
-
 })
 
