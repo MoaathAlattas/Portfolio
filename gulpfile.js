@@ -106,6 +106,9 @@ gulp.task('build', ['cleanBuild'], function () {
 return gulp.src([path.dev + path.img +'*'])
           .pipe(gulp.dest(path.build+path.img)),
 
+       gulp.src([path.dev +'*.pdf'])
+          .pipe(gulp.dest(path.build)),
+
        gulp.src([path.dev +'projects/img/*.png'])
           .pipe(gulp.dest(path.build+path.img+'projects/')),         
           
